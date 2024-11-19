@@ -6,6 +6,12 @@ import "fmt"
 四种变量的声明方式
 */
 
+// 声明全局变量 方法1，方法2，方法3是可以的
+var gA int = 100
+var gB = 200
+
+// 方法4是不支持全局变量的
+// z := 300
 func main() {
 	//方法1：声明一个变量 默认值是0
 	var a int
@@ -34,4 +40,19 @@ func main() {
 	g := 3.14
 	fmt.Println("g = ", g)
 	fmt.Printf("type of g = %T\n", g)
+
+	fmt.Println("gA = ", gA, "gB = ", gB)
+
+	// 声明多个变量
+	var xx, yy int = 100, 200
+	fmt.Println("xx = ", xx, "yy = ", yy)
+	var kk, ll = 100, "hello"
+	fmt.Println("kk = ", kk, "ll = ", ll)
+
+	// 多行的多变量声明
+	var (
+		aa = 100
+		bb = true
+	)
+	fmt.Println("aa = ", aa, "bb = ", bb)
 }
